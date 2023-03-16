@@ -5,7 +5,7 @@ pipeline { //Start of declerative pipeline
 	agent any // Node on which pipeline should be executed
 	parameters { // Parameters to be used in the pipeline
         choice(name: 'gitBranch', choices:"master", description: 'profile Name for build Maven Project')
-        choice(name: 'gitCredentialsId', choices: 'c7a322af-5d26-4850-b49d-14c2acaa5add', description: 'others')
+        choice(name: 'gitCredentialsId', choices: 'github', description: 'others')
         choice(name: 'gitProjectRepo', choices: "https://github.com/oni001/spring-boot-app.git", description: "")
 		choice(name: 'REPOSITORY_URI', choices: "681504525746.dkr.ecr.us-east-1.amazonaws.com/eureka", description: "Docker repo URL")
 		choice(name: 'SERVICE_NAME', choices: 'eureka')
